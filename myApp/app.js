@@ -23,15 +23,13 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(cors());
 app.use('/', routes);
 app.use('/users', users);
 
-app.use(cors());
+
  
-app.get('http://g12-lisa-carlson-memories.cfapps.io/api/v1/memories', function(req, res, next){
-  res.json({msg: 'This is CORS-enabled for all origins!'});
-});
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
