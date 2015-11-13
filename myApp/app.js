@@ -33,7 +33,7 @@ app.use(function(req, res, next) {
   next();
 });
  
-app.get('/api/v1/memories', function(req, res, next){
+app.get('http://g12-lisa-carlson-memories.cfapps.io/api/v1/memories', function(req, res, next){
   res.json({msg: 'This is CORS-enabled for all origins!'});
 });
 
