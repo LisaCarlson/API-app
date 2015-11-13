@@ -9,5 +9,10 @@ module.exports = {
         obj = {};
       }
     return output;
+  },
+  formatYears: function(array) {
+    return array.map(function (yearObj) {
+      return yearObj.year;
+    });
   }
 }
