@@ -1,10 +1,11 @@
 module.exports = {
   formatResponse: function(array){
-    var output = {data:[]};
+    var output = {links: {}, data:[]};
       for (var x in array.rows) {
         var obj = {};
         obj.type = "memory";
         obj.attributes = array.rows[x];
+        obj.links = {};
         output.data.push(obj);
         obj = {};
       }
