@@ -12,8 +12,11 @@ module.exports = {
     return output;
   },
   formatYears: function(array) {
-    return array.map(function (yearObj) {
+    var output = {links: {}, data:[]};
+    var yearData = array.map(function (yearObj) {
       return yearObj.year;
     });
+    output.data = yearData;
+    return output;
   }
 }
